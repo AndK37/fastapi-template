@@ -7,4 +7,4 @@ class CategorySchema(BaseCategory):
 
 
 class ProductSchema(BaseProduct):
-    categories: List[BaseCategory]
+    category: BaseCategory

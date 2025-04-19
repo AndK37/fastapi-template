@@ -15,9 +15,12 @@ class Product(Base): # N
 
     category = relationship("Category", backref='products')
 
-class Student(Base):
-    __tablename__ = 'students'
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    surname = Column(String(255))
-    name = Column(String(255))
-    group = Column(String(255))
+    def __repr__(self):
+        return f"<Products(id={self.id}, name={self.name}, category_id={self.category_id})>"
+
+# class Student(Base):
+#     __tablename__ = 'students'
+#     id = Column(Integer, primary_key=True, autoincrement=True)
+#     surname = Column(String(255))
+#     name = Column(String(255))
+#     group = Column(String(255))
